@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Lấy mã nguồn
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cài Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
@@ -58,7 +58,7 @@ jobs:
           ls -lh app-unsigned.ipa
 
       - name: Lưu file .ipa vào mục Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ios-ipa
           path: app-unsigned.ipa
